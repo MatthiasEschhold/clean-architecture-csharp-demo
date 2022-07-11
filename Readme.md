@@ -2,8 +2,8 @@
 
 ## Zur Artikelserie
 
-* [Zu Teil 1 - WIP]()
-* [Zu Teil 2 - WIP]()
+* Windows Developer 09/22 [Zu Teil 1 - WIP]()
+* Windows Developer 10/22 [Zu Teil 2 - WIP]()
 
 
 Am Beispiel der Root Entity Fahrzeug wird das Clean Architecture Pattern veranschaulicht. Die Strukturierung des Module Fahrzeug ist
@@ -94,3 +94,18 @@ public class FahrzeugDtoMappingProfile : Profile
         }
     }
 ```
+
+## Architekturtests mit ArchUnitNET
+
+Ergänzend zur Root Entity Fahrzeug werden das Fahrzeugangebot und die Fahrzeugbewertung eingeführt. Für die daraus
+resultierenden fachliche Modulen, befinden sich [Fitness Functions](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/tree/main/Test/CleanArchitecture/FitnessFunctions) 
+in Form von Strukturtests als Unit Tests mit Hilfe der Bibliothek [ArchUnitNET](https://github.com/TNG/ArchUnitNET). 
+Die drei Beispiele werden in der folgenden Tabelle detaillierter beschrieben.
+
+|Unit Test|Beschreibung|
+|---------|------------|
+|[CleanArchitectureAllRingsCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureAllRingsCheck.cs)|Prüfung der Beziehungsregeln für alle fachlichen Module in einem zusammengesetzten Unit Test.|
+|[CleanArchitectureDetailRingCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureDetailRingCheck.cs)|Jeder Ring wird separat als eigener Unit Test geprüft.|
+|[CleanArchitectureRootEntityModularizationCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureRootEntityModularizationCheck.cs)|Dieser Test prüft die Einhaltung der fachlichen Modularisierung. Dies ist ergänzend zu den anderen Tests, da in diesen nur der Klassen-Stereotyp geprüft wird.|
+
+Hinweis: Zur Verdeutlichung sind bewusst Beziehungsverletzungen zwischen Klassen-Stereotypen und fachlichen Modulen implementiert
