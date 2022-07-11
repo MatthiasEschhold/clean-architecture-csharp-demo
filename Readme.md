@@ -6,7 +6,7 @@
 * Windows Developer 10/22
 
 
-Am Beispiel der Root Entity Fahrzeug wird das Clean Architecture Pattern veranschaulicht. Die Strukturierung des Module Fahrzeug ist
+Am Beispiel der Root Entity Fahrzeug wird das Clean Architecture Pattern veranschaulicht. Die Strukturierung des Moduls Fahrzeug ist
 architektonisch ausdrucksstark abgebildet. Für das Mapping wird die Two-Way Mapping Strategie eingesetzt.
 
 ## Mappings mit AutoMapper
