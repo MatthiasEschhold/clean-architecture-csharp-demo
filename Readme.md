@@ -16,7 +16,7 @@ Library: [AutoMapper](https://github.com/AutoMapper/AutoMapper)
 ### Simples Mapping zwischen Domäne und der Infrastrukturkomponente Web
 
 Die Two-Way Mapping Strategie kann auf Basis einer einfachen Konfiguration realisiert werden, wenn die Klasseneigenschaften den gleichen Namen haben.
-Diés ist der Fall auf Beispiel FahrzeugEntity und FahrzeugResource.
+Dies ist der Fall bei der FahrzeugEntity und der FahrzeugResource.
 
 ```csharp
 public class FahrzeugEntity
@@ -104,8 +104,8 @@ Die drei Beispiele werden in der folgenden Tabelle detaillierter beschrieben.
 
 |Unit Test|Beschreibung|
 |---------|------------|
-|[CleanArchitectureAllRingsCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureAllRingsCheck.cs)|Prüfung der Beziehungsregeln für alle fachlichen Module in einem zusammengesetzten Unit Test.|
+|[CleanArchitectureAllRingsCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureAllRingsCheck.cs)|Die Prüfung der Beziehungsregeln für alle fachlichen Module erfolgen in einem Unit Test.|
 |[CleanArchitectureDetailRingCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureDetailRingCheck.cs)|Jeder Ring wird separat als eigener Unit Test geprüft.|
-|[CleanArchitectureRootEntityModularizationCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureRootEntityModularizationCheck.cs)|Dieser Test prüft die Einhaltung der fachlichen Modularisierung. Dies ist ergänzend zu den anderen Tests, da in diesen nur der Klassen-Stereotyp geprüft wird.|
+|[CleanArchitectureRootEntityModularizationCheck](https://github.com/MatthiasEschhold/clean-architecture-csharp-demo/blob/main/Test/CleanArchitecture/FitnessFunctions/CleanArchitectureRootEntityModularizationCheck.cs)|Dieser Test prüft die Einhaltung der fachlichen Modularisierung. Dies ist ergänzend zu den anderen Tests, da in diesen nur die Beziehungsregeln anhand der Klassen-Stereotypen geprüft werden, ohne fachliche Modulgrenzen zu berücksichtigen.|
 
 Hinweis: Zur Verdeutlichung sind bewusst Beziehungsverletzungen zwischen Klassen-Stereotypen und den fachlichen Modulen implementiert
